@@ -5,10 +5,10 @@ import json
 import os
 
 # Load pretrained YOLOv8 model
-model = YOLO("/home/rric/GRASP/graspnet-baseline/Sorting_YOLO_SAM/yolo11n.pt")  
+model = YOLO("/home/liuz/Work/GRASP/graspnet-baseline/Sorting_YOLO_SAM/yolo11n.pt")  
 
 # Load your image
-image_path = "/home/rric/GRASP/graspnet-baseline/Sorting_YOLO_SAM/Scene_image/color.png"
+image_path = "/home/liuz/Work/GRASP/graspnet-baseline/Sorting_YOLO_SAM/Scene_image/color.png"
 frame = cv2.imread(image_path)
 if frame is None:
     raise FileNotFoundError(f"Image not found at {image_path}")
@@ -61,14 +61,14 @@ bbox = {
 }
 
 # Save to JSON
-json_path = "/home/rric/GRASP/graspnet-baseline/Sorting_YOLO_SAM/cup_box.json"
+json_path = "/home/liuz/Work/GRASP/graspnet-baseline/Sorting_YOLO_SAM/cup_box.json"
 with open(json_path, "w") as f:
     json.dump(bbox, f)
 
 print(f"Bounding box saved to {json_path}")
 
 # --- Save and display image ---
-output_path = "/home/rric/GRASP/graspnet-baseline/Sorting_YOLO_SAM/Scene_image/scene_detected.jpg"
+output_path = "/home/liuz/Work/GRASP/graspnet-baseline/Sorting_YOLO_SAM/Scene_image/scene_detected.jpg"
 cv2.imwrite(output_path, frame)
 print(f"Detection saved to {output_path}")
 

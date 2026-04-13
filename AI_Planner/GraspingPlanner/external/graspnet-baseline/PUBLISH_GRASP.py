@@ -18,7 +18,7 @@ class StaticGraspFramePublisher(Node):
         super().__init__('static_grasp_frame_publisher')
         self.mode = mode
         self.tf_static_broadcaster = tf2_ros.StaticTransformBroadcaster(self)
-        self.file_path = '/home/rric/GRASP/graspnet-baseline/scene_data/predicted_grasps.npy'
+        self.file_path = '/home/liuz/Work/GRASP/graspnet-baseline/scene_data/predicted_grasps.npy'
         self.last_mod_time = 0
 
         # Interval to check if predicted_grasps_matchappend.npy is changed on disk

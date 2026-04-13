@@ -2,7 +2,7 @@ import numpy as np
 from graspnetAPI import GraspGroup
 
 # Load predicted grasps
-grasps = np.load('/home/rric/GRASP/CLEAN_PROCESS/scene_data/predicted_grasps.npy', allow_pickle=True)
+grasps = np.load('/home/liuz/Work/GRASP/CLEAN_PROCESS/scene_data/predicted_grasps.npy', allow_pickle=True)
 
 # Convert to GraspGroup object
 gg = GraspGroup(grasps)

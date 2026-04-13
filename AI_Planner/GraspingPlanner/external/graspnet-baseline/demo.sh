@@ -33,7 +33,7 @@ while true; do
 
   echo "======Segment Target Object======"
   python3 ~/segment-anything/sgmt_interactive.py && # choose mask area
-  #python3 /home/rric/GRASP/graspnet-baseline/AUTOMATIC_MASK.py
+  #python3 /home/liuz/Work/GRASP/graspnet-baseline/AUTOMATIC_MASK.py
   echo "====End Segment Target Object===="
 
   conda activate graspnet-baseline

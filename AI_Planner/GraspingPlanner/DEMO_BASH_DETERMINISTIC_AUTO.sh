@@ -5,15 +5,15 @@ source ~/miniforge3/bin/activate
 
 # Function to cleanup files
 cleanup_files() {
-    rm -f /home/rric/xArm7_Grasping_Pipeline/AI_Planner/GraspingPlanner/scene_data/annotated.png
-    rm -f /home/rric/xArm7_Grasping_Pipeline/AI_Planner/GraspingPlanner/scene_data/color.png
-    rm -f /home/rric/xArm7_Grasping_Pipeline/AI_Planner/GraspingPlanner/scene_data/depth.png
-    rm -f /home/rric/xArm7_Grasping_Pipeline/AI_Planner/GraspingPlanner/scene_data/data.json
-    rm -f /home/rric/xArm7_Grasping_Pipeline/AI_Planner/GraspingPlanner/scene_data/grasp_points.json
-    rm -f /home/rric/xArm7_Grasping_Pipeline/AI_Planner/GraspingPlanner/scene_data/predicted_grasps.npy
-    rm -f /home/rric/xArm7_Grasping_Pipeline/AI_Planner/GraspingPlanner/scene_data/selected_grasp.json
-    rm -f /home/rric/xArm7_Grasping_Pipeline/AI_Planner/GraspingPlanner/scene_data/vertical_grasp_vis.png
-    rm -f /home/rric/xArm7_Grasping_Pipeline/AI_Planner/GraspingPlanner/scene_data/masks/*
+    rm -f /home/liuz/Work/xArm7_Grasping_Pipeline/AI_Planner/GraspingPlanner/scene_data/annotated.png
+    rm -f /home/liuz/Work/xArm7_Grasping_Pipeline/AI_Planner/GraspingPlanner/scene_data/color.png
+    rm -f /home/liuz/Work/xArm7_Grasping_Pipeline/AI_Planner/GraspingPlanner/scene_data/depth.png
+    rm -f /home/liuz/Work/xArm7_Grasping_Pipeline/AI_Planner/GraspingPlanner/scene_data/data.json
+    rm -f /home/liuz/Work/xArm7_Grasping_Pipeline/AI_Planner/GraspingPlanner/scene_data/grasp_points.json
+    rm -f /home/liuz/Work/xArm7_Grasping_Pipeline/AI_Planner/GraspingPlanner/scene_data/predicted_grasps.npy
+    rm -f /home/liuz/Work/xArm7_Grasping_Pipeline/AI_Planner/GraspingPlanner/scene_data/selected_grasp.json
+    rm -f /home/liuz/Work/xArm7_Grasping_Pipeline/AI_Planner/GraspingPlanner/scene_data/vertical_grasp_vis.png
+    rm -f /home/liuz/Work/xArm7_Grasping_Pipeline/AI_Planner/GraspingPlanner/scene_data/masks/*
 }
 cleanup_files
 

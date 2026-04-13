@@ -31,7 +31,7 @@ while true; do
   conda activate sam
 
   echo "======Segment Target Object Automatically======"
-  python3 /home/rric/GRASP/graspnet-baseline/AUTOMATIC_MASK.py
+  python3 /home/liuz/Work/GRASP/graspnet-baseline/AUTOMATIC_MASK.py
 
   conda activate graspnet-baseline
   
@@ -43,7 +43,7 @@ while true; do
   #python3 visualizegrasp.py --mode orientation_mask --view top & # visualize filtered grasp candidates that match mask 
 
   echo "===Properties_Mask==="
-  python /home/rric/GRASP/graspnet-baseline/PROPERTIES_MASK.py
+  python /home/liuz/Work/GRASP/graspnet-baseline/PROPERTIES_MASK.py
 
 
   echo "======Starting Arm Movement======"

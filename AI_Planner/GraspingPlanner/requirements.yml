@@ -152,4 +152,4 @@ dependencies:
       - urllib3==2.6.2
       - wcwidth==0.2.14
       - werkzeug==3.1.4
-prefix: /home/rric/miniforge3/envs/AI_Planner
+prefix: /home/liuz/Work/miniforge3/envs/AI_Planner

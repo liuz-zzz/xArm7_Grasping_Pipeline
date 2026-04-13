@@ -15,8 +15,8 @@ except ImportError:
 # =========================================================================
 # PATH SETUP
 # =========================================================================
-BASELINE_ROOT = '/home/rric/xArm7_Grasping_Pipeline/AI_Planner/GraspingPlanner/external/graspnet-baseline'
-API_ROOT = '/home/rric/xArm7_Grasping_Pipeline/AI_Planner/GraspingPlanner/external/graspnetAPI'
+BASELINE_ROOT = '/home/liuz/Work/xArm7_Grasping_Pipeline/AI_Planner/GraspingPlanner/external/graspnet-baseline'
+API_ROOT = '/home/liuz/Work/xArm7_Grasping_Pipeline/AI_Planner/GraspingPlanner/external/graspnetAPI'
 
 def setup_paths():
     if API_ROOT not in sys.path: 

@@ -1,4 +1,4 @@
-#!/home/rric/miniforge3/envs/AI_Planner/bin/python3
+#!/home/liuz/Work/miniforge3/envs/AI_Planner/bin/python3
 
 """
 Centers the tray to get a view
@@ -59,7 +59,7 @@ class Calibrate_Tray(Node):
         print("[Calibration] CV Bridge Initialized")
 
         # Intitialize YOLO World
-        self.yolo_inference(yolo_path = "/home/rric/AI_Planner/GraspingPlanner/models/yolov8x-worldv2.pt")
+        self.yolo_inference(yolo_path = "/home/liuz/Work/AI_Planner/GraspingPlanner/models/yolov8x-worldv2.pt")
 
         # Setup Robot (Move to Home Pos to identify tray)
         self.setup_robot()

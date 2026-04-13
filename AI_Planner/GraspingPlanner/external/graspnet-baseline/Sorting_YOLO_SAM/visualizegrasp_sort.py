@@ -13,13 +13,13 @@ from graspnetAPI import GraspGroup
 from screeninfo import get_monitors  # Added for screen size
 
 ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
-sys.path.append(os.path.join(ROOT_DIR, '/home/rric/GRASP/graspnet-baseline/utils'))
+sys.path.append(os.path.join(ROOT_DIR, '/home/liuz/Work/GRASP/graspnet-baseline/utils'))
 
 from data_utils import CameraInfo, create_point_cloud_from_depth_image
 
 parser = argparse.ArgumentParser()
-parser.add_argument('--data_dir', default='/home/rric/GRASP/graspnet-baseline/Sorting_YOLO_SAM/Scene_image', help='Path to the data directory')
-parser.add_argument('--grasp_path', default='/home/rric/GRASP/graspnet-baseline/Sorting_YOLO_SAM/Scene_data/predicted_grasps.npy', help='Path to saved grasp file')
+parser.add_argument('--data_dir', default='/home/liuz/Work/GRASP/graspnet-baseline/Sorting_YOLO_SAM/Scene_image', help='Path to the data directory')
+parser.add_argument('--grasp_path', default='/home/liuz/Work/GRASP/graspnet-baseline/Sorting_YOLO_SAM/Scene_data/predicted_grasps.npy', help='Path to saved grasp file')
 parser.add_argument('--mode', choices=['raw', 'orientation_only', 'mask_only', 'orientation_mask'], default='raw', help='Choose which filters to apply to grasps')
 parser.add_argument('--view', choices=['all', 'top'], default='all', help='Choose to visuslise all grasps or only the top 1 grasp')
 
@@ -28,9 +28,9 @@ args = parser.parse_args()
 
 def load_point_cloud(data_dir):
     # Load data
-    color = np.array(Image.open(os.path.join(data_dir, '/home/rric/GRASP/graspnet-baseline/Sorting_YOLO_SAM/Scene_image/color.png')), dtype=np.float32) / 255.0
-    depth = np.array(Image.open(os.path.join(data_dir, '/home/rric/GRASP/graspnet-baseline/Sorting_YOLO_SAM/Scene_image/depth.png')))
-    workspace_mask = np.array(Image.open(os.path.join(data_dir, '/home/rric/GRASP/graspnet-baseline/Sorting_YOLO_SAM/Scene_image/full_workspace_mask.png')))
+    color = np.array(Image.open(os.path.join(data_dir, '/home/liuz/Work/GRASP/graspnet-baseline/Sorting_YOLO_SAM/Scene_image/color.png')), dtype=np.float32) / 255.0
+    depth = np.array(Image.open(os.path.join(data_dir, '/home/liuz/Work/GRASP/graspnet-baseline/Sorting_YOLO_SAM/Scene_image/depth.png')))
+    workspace_mask = np.array(Image.open(os.path.join(data_dir, '/home/liuz/Work/GRASP/graspnet-baseline/Sorting_YOLO_SAM/Scene_image/full_workspace_mask.png')))
     factor_depth = 1000.0
 
     # Use known camera intrinsics

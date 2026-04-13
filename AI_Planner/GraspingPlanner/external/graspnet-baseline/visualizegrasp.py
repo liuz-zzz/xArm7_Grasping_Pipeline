@@ -18,8 +18,8 @@ sys.path.append(os.path.join(ROOT_DIR, 'utils'))
 from data_utils import CameraInfo, create_point_cloud_from_depth_image
 
 parser = argparse.ArgumentParser()
-parser.add_argument('--data_dir', default='/home/rric/GRASP/graspnet-baseline/scene_images', help='Path to the data directory')
-parser.add_argument('--grasp_path', default='/home/rric/GRASP/graspnet-baseline/scene_data/predicted_grasps.npy', help='Path to saved grasp file')
+parser.add_argument('--data_dir', default='/home/liuz/Work/GRASP/graspnet-baseline/scene_images', help='Path to the data directory')
+parser.add_argument('--grasp_path', default='/home/liuz/Work/GRASP/graspnet-baseline/scene_data/predicted_grasps.npy', help='Path to saved grasp file')
 parser.add_argument('--mode', choices=['raw', 'orientation_only', 'mask_only', 'orientation_mask'], default='raw', help='Choose which filters to apply to grasps')
 parser.add_argument('--view', choices=['all', 'top'], default='all', help='Choose to visuslise all grasps or only the top 1 grasp')
 

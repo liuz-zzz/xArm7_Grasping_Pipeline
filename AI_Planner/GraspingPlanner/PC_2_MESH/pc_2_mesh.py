@@ -105,8 +105,8 @@ d435_intrinsics = {
     'cy': 377.44
 }
 
-input_dir = "/home/rric/AI_Planner/GraspingPlanner/scene_data/"
-output_dir = "/home/rric/AI_Planner/GraspingPlanner/PC_2_MESH/output_data/"
+input_dir = "/home/liuz/Work/AI_Planner/GraspingPlanner/scene_data/"
+output_dir = "/home/liuz/Work/AI_Planner/GraspingPlanner/PC_2_MESH/output_data/"
 
 if __name__ == "__main__":
     generate_final_centered_mesh(

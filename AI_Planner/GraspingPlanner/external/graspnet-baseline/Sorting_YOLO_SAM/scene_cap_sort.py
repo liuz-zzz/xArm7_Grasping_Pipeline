@@ -24,8 +24,8 @@ color_intrinsics = color_sensor.as_video_stream_profile().get_intrinsics()
 
 time.sleep(2.25)
 
-rgb_dir = "/home/rric/GRASP/graspnet-baseline/Sorting_YOLO_SAM/Scene_image"
-depth_dir = "/home/rric/GRASP/graspnet-baseline/Sorting_YOLO_SAM/Scene_image"
+rgb_dir = "/home/liuz/Work/GRASP/graspnet-baseline/Sorting_YOLO_SAM/Scene_image"
+depth_dir = "/home/liuz/Work/GRASP/graspnet-baseline/Sorting_YOLO_SAM/Scene_image"
 os.makedirs(rgb_dir, exist_ok=True)
 os.makedirs(depth_dir, exist_ok=True)
 

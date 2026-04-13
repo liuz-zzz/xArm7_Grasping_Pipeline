@@ -10,12 +10,12 @@ from screeninfo import get_monitors  # <-- added import
 import matplotlib.pyplot as plt
 
 # --- Load and prepare image ---
-image_path="/home/rric/GRASP/graspnet-baseline/scene_images/color.png"
+image_path="/home/liuz/Work/GRASP/graspnet-baseline/scene_images/color.png"
 image = cv2.imread(image_path)
 image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 
 # --- Load SAM model ---
-sam_checkpoint = "/home/rric/segment-anything/checkpoint/sam_vit_b.pth"
+sam_checkpoint = "/home/liuz/Work/segment-anything/checkpoint/sam_vit_b.pth"
 model_type = "vit_b"
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
@@ -26,7 +26,7 @@ predictor = SamPredictor(sam)
 predictor.set_image(image)
 
 #Choose Top Grasp Point:
-grasp_array = np.load("/home/rric/GRASP/graspnet-baseline/scene_data/predicted_grasps.npy")
+grasp_array = np.load("/home/liuz/Work/GRASP/graspnet-baseline/scene_data/predicted_grasps.npy")
 #Filter after highest score and Orientation Filter [17]=1
 top_grasp = None
 for grasp in grasp_array:
@@ -70,6 +70,6 @@ mask_uint8 = (mask * 255).astype('uint8')
 # Expand mask outline outward by 10 pixels
 kernel_size = 35 #normally 20
 kernel = np.ones((kernel_size, kernel_size), np.uint8)
-cv2.imwrite('/home/rric/GRASP/graspnet-baseline/scene_data/normal_mask.png', mask_uint8)
+cv2.imwrite('/home/liuz/Work/GRASP/graspnet-baseline/scene_data/normal_mask.png', mask_uint8)
 expanded_mask = cv2.dilate(mask_uint8, kernel, iterations=2)
-cv2.imwrite('/home/rric/GRASP/graspnet-baseline/scene_data/mask.png', expanded_mask)
+cv2.imwrite('/home/liuz/Work/GRASP/graspnet-baseline/scene_data/mask.png', expanded_mask)

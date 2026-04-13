@@ -50,10 +50,10 @@ class Config:
     
     # --- PFADE ---
     OUTPUT_DIR: str = os.path.expanduser("~/AI_Planner/GraspingPlanner/scene_data")
-    PROMPT_PATH: str = "/home/rric/AI_Planner/GraspingPlanner/prompts/save_long_prompt.txt"
+    PROMPT_PATH: str = "/home/liuz/Work/AI_Planner/GraspingPlanner/prompts/save_long_prompt.txt"
     
     # --- GRASPNET ---
-    GRASPNET_CHECKPOINT = "/home/rric/AI_Planner/GraspingPlanner/external/graspnet-baseline/logs/log_kn/checkpoint-rs.tar"
+    GRASPNET_CHECKPOINT = "/home/liuz/Work/AI_Planner/GraspingPlanner/external/graspnet-baseline/logs/log_kn/checkpoint-rs.tar"
     WORKSPACE_MASK_PATH = "home/rric/AI_Planner/GraspingPlaner/scene_data/workspace_mask/full_workspace_mask.png"
     WORKSPACE_MIN_Z: float = 0.15
     WORKSPACE_MAX_Z: float = 0.80

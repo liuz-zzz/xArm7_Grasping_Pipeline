@@ -2,7 +2,7 @@ import numpy as np
 
 
 # File Paths
-grasp_path = '/home/rric/GRASP/graspnet-baseline/Sorting_YOLO_SAM/Scene_data/predicted_grasps.npy'
+grasp_path = '/home/liuz/Work/GRASP/graspnet-baseline/Sorting_YOLO_SAM/Scene_data/predicted_grasps.npy'
 
 # Step 1: Load predicted grasps
 grasp_array = np.load(grasp_path)  # shape: (N, 17)

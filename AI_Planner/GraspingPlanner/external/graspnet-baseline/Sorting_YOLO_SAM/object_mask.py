@@ -5,12 +5,12 @@ import numpy as np
 import json
 
 # --- Load image ---
-image_path = "/home/rric/GRASP/graspnet-baseline/Sorting_YOLO_SAM/Scene_image/color.png"
+image_path = "/home/liuz/Work/GRASP/graspnet-baseline/Sorting_YOLO_SAM/Scene_image/color.png"
 image = cv2.imread(image_path)
 image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 
 # --- Load SAM model ---
-sam_checkpoint = "/home/rric/segment-anything/checkpoint/sam_vit_b.pth"
+sam_checkpoint = "/home/liuz/Work/segment-anything/checkpoint/sam_vit_b.pth"
 model_type = "vit_b"
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 sam = sam_model_registry[model_type](checkpoint=sam_checkpoint)
@@ -20,7 +20,7 @@ predictor = SamPredictor(sam)
 predictor.set_image(image)
 
 # --- YOLO bounding box (replace with actual YOLO output) ---
-with open("/home/rric/GRASP/graspnet-baseline/Sorting_YOLO_SAM/cup_box.json", "r") as f:
+with open("/home/liuz/Work/GRASP/graspnet-baseline/Sorting_YOLO_SAM/cup_box.json", "r") as f:
     bbox = json.load(f)
 
 x1, y1, x2, y2 = bbox["x1"], bbox["y1"], bbox["x2"], bbox["y2"]
@@ -45,5 +45,5 @@ mask = masks[best_idx]
 
 # --- Save mask ---
 mask_uint8 = (mask * 255).astype(np.uint8)
-cv2.imwrite("/home/rric/GRASP/graspnet-baseline/Sorting_YOLO_SAM/Scene_image/mask.png", mask_uint8)
+cv2.imwrite("/home/liuz/Work/GRASP/graspnet-baseline/Sorting_YOLO_SAM/Scene_image/mask.png", mask_uint8)
 print("Mask saved as 'mask.png'")

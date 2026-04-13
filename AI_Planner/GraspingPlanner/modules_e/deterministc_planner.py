@@ -185,7 +185,7 @@ class DeterministicPlanner:
 
 if __name__ == "__main__":
     planner = DeterministicPlanner()
-    planner.load_data(json_path="/home/rric/xArm7_Grasping_Pipeline/AI_Planner/GraspingPlanner/scene_data/data.json")
+    planner.load_data(json_path="/home/liuz/Work/xArm7_Grasping_Pipeline/AI_Planner/GraspingPlanner/scene_data/data.json")
     # Show all available objects
     planner.available_objects()
     # First Step: Identify Blocked Objects

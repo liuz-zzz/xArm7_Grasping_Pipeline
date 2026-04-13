@@ -15,9 +15,9 @@ import torch
 from graspnetAPI import GraspGroup, GraspNet
 
 ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
-sys.path.append(os.path.join(ROOT_DIR, '/home/rric/GRASP/graspnet-baseline/models'))
-sys.path.append(os.path.join(ROOT_DIR, '/home/rric/GRASP/graspnet-baseline/dataset'))
-sys.path.append(os.path.join(ROOT_DIR, '/home/rric/GRASP/graspnet-baseline/utils'))
+sys.path.append(os.path.join(ROOT_DIR, '/home/liuz/Work/GRASP/graspnet-baseline/models'))
+sys.path.append(os.path.join(ROOT_DIR, '/home/liuz/Work/GRASP/graspnet-baseline/dataset'))
+sys.path.append(os.path.join(ROOT_DIR, '/home/liuz/Work/GRASP/graspnet-baseline/utils'))
 
 from graspnet import GraspNet, pred_decode
 from graspnet_dataset import GraspNetDataset
@@ -51,9 +51,9 @@ def get_net():
 
 def get_and_process_data(data_dir):
     # load data
-    color = np.array(Image.open(os.path.join(scene_dir, '/home/rric/GRASP/graspnet-baseline/Sorting_YOLO_SAM/Scene_image/color.png')), dtype=np.float32) / 255.0
-    depth = np.array(Image.open(os.path.join(scene_dir, '/home/rric/GRASP/graspnet-baseline/Sorting_YOLO_SAM/Scene_image/depth.png')))
-    workspace_mask = np.array(Image.open(os.path.join(scene_dir, '/home/rric/GRASP/graspnet-baseline/scene_images/full_workspace_mask.png')))
+    color = np.array(Image.open(os.path.join(scene_dir, '/home/liuz/Work/GRASP/graspnet-baseline/Sorting_YOLO_SAM/Scene_image/color.png')), dtype=np.float32) / 255.0
+    depth = np.array(Image.open(os.path.join(scene_dir, '/home/liuz/Work/GRASP/graspnet-baseline/Sorting_YOLO_SAM/Scene_image/depth.png')))
+    workspace_mask = np.array(Image.open(os.path.join(scene_dir, '/home/liuz/Work/GRASP/graspnet-baseline/scene_images/full_workspace_mask.png')))
     #meta = scio.loadmat(os.path.join(data_dir, 'meta.mat'))
     #intrinsic = meta['intrinsic_matrix']
     #factor_depth = meta['factor_depth']
@@ -153,6 +153,6 @@ def demo(data_dir):
     #vis_grasps(gg, cloud)
 
 if __name__=='__main__':
-    scene_dir = '/home/rric/GRASP/graspnet-baseline/Sorting_YOLO_SAM/Scene_image'
-    data_dir = '/home/rric/GRASP/graspnet-baseline/Sorting_YOLO_SAM/Scene_data'
+    scene_dir = '/home/liuz/Work/GRASP/graspnet-baseline/Sorting_YOLO_SAM/Scene_image'
+    data_dir = '/home/liuz/Work/GRASP/graspnet-baseline/Sorting_YOLO_SAM/Scene_data'
     demo(data_dir)

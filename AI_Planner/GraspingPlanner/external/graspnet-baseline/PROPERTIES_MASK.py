@@ -3,9 +3,9 @@ import numpy as np
 import json
 
 #load mask
-mask = cv2.imread("/home/rric/GRASP/graspnet-baseline/scene_data/normal_mask.png", cv2.IMREAD_GRAYSCALE)
+mask = cv2.imread("/home/liuz/Work/GRASP/graspnet-baseline/scene_data/normal_mask.png", cv2.IMREAD_GRAYSCALE)
 #load predicted_grasps
-grasp_array = np.load("/home/rric/GRASP/graspnet-baseline/scene_data/predicted_grasps.npy")
+grasp_array = np.load("/home/liuz/Work/GRASP/graspnet-baseline/scene_data/predicted_grasps.npy")
 
 if mask is None:
     raise ValueError("Mask not loaded")
@@ -75,7 +75,7 @@ data_to_save = {
     "is_trash": bool(is_trash)
 }
 
-with open("/home/rric/GRASP/graspnet-baseline/scene_data/grasp_info.json", "w") as f:
+with open("/home/liuz/Work/GRASP/graspnet-baseline/scene_data/grasp_info.json", "w") as f:
     json.dump(data_to_save, f, indent=4)  
 
 #print("Area und Winkel gespeichert in grasp_info.json")

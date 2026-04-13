@@ -19,7 +19,7 @@ class CoordinateTransformerAndArmMover(Node):
         super().__init__('coordinate_transformer_and_arm_mover')
 
         #Properties Classifikation
-        with open("/home/rric/GRASP/graspnet-baseline/scene_data/grasp_info.json", "r") as f:
+        with open("/home/liuz/Work/GRASP/graspnet-baseline/scene_data/grasp_info.json", "r") as f:
             data = json.load(f)
 
         self.area_pixels = data["area_pixels"]

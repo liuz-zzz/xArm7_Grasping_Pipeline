@@ -2,8 +2,8 @@ import numpy as np
 import cv2
 
 # File Paths
-grasp_path = '/home/rric/GRASP/graspnet-baseline/Sorting_YOLO_SAM/Scene_data/predicted_grasps.npy'
-mask_path = '/home/rric/GRASP/graspnet-baseline/Sorting_YOLO_SAM/Scene_image/mask.png'
+grasp_path = '/home/liuz/Work/GRASP/graspnet-baseline/Sorting_YOLO_SAM/Scene_data/predicted_grasps.npy'
+mask_path = '/home/liuz/Work/GRASP/graspnet-baseline/Sorting_YOLO_SAM/Scene_image/mask.png'
 
 
 # Step 1: Load predicted grasps
